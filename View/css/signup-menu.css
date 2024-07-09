@@ -1,0 +1,164 @@
+/* Form container */
+#create {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45%;
+    max-width: 35rem; 
+    height: 95%;
+}
+
+/* Background overlay */
+#sigin-background {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(87, 84, 84, .4);
+    z-index: 10005;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Sign-in form */
+.signin {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2.5rem; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45%; 
+    max-width: 35rem; 
+    height: 80%;
+}
+
+/* Close icon */
+.signin-icon {
+    cursor: pointer;
+    position: absolute;
+    right: 4%;
+    top: 2%;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+/* Close icon hover effect */
+.signin-icon:active {
+    background: rgba(138, 135, 135, .3);
+    border-radius: 50%;
+}
+
+/* Heading */
+.signin-heading {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* "Already have an account?" */
+.signin-already {
+    text-align: center;
+    font-size: 1.6rem;}
+
+/* Underlined link */
+.signin-link-underline {
+    color: #ed673a;
+    font-size: inherit;
+    text-decoration: underline;
+}
+
+/* Form input */
+.form-input {
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    outline: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border: 1px solid #eee; 
+    background-color: #eee;
+    transition: .25s linear;
+    width: 100%;
+    height: 10%;
+}
+
+/* Form input focus state */
+.form-input:focus {
+    border-color: #eee;
+    background-color: #eee;
+}
+
+/* Placeholder text */
+.form-input::-webkit-input-placeholder {
+    color: #c3beb3;
+    font-style: italic;
+}
+
+/* Form submit button */
+.form-submit {
+    border-radius: 10px;
+    color: white;
+    outline: none;
+    padding: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border: 0;
+    width: 80%;
+    background-color: #ed673a;
+}
+
+/* Form submit button hover state */
+.form-submit:hover {
+    background-color: #E95221;
+}
+
+/* Form submit button active state */
+.form-submit:active {
+    background-color: #ed673a;
+}
+
+/* Centering text within submit button */
+.form-submit-text {
+    margin: 0 auto;
+    font-size: 1.4rem;
+}
+.error-signin {
+        height: 0.5rem;
+        margin-bottom: 1rem;
+        color: red; /* Màu chữ đỏ */
+}
+.error-signin p{
+    height: 100%;
+    font-size: 1rem;
+}
+/*label jquery validate*/
+form label {
+    color: red;
+    font-size: 1.4rem;
+    left: 0;
+    width: 100%;
+    
+}
+form label.error{
+    height: 2rem;
+    margin-bottom: 2rem;        
+}

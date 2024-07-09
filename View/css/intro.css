@@ -1,0 +1,126 @@
+.time-post .time-post-l {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative
+}
+
+.time-post-r{
+    margin-top: -18px;
+    padding-bottom: 20px;
+    padding-right: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative
+}
+
+.article-title{
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.col-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%
+}
+
+.blog{
+    max-width: 100;
+    margin-top: 20px;
+}
+
+.rte p{
+    margin-bottom: 30px;
+}
+
+.right-content{
+    width: 60%; 
+    float: right; 
+    box-sizing: border-box; 
+    padding-right: 15%;
+}
+
+.left-content{
+    max-width: auto; 
+    float: left; 
+    box-sizing: content-box; 
+    padding-left: 20%; 
+}
+
+.left-incontent {
+    border: 1px solid wheat; 
+    border-radius: 10px;
+    background-color: antiquewhite;
+}
+
+.blog-noi-bat {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 0.8;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.item-clearfix {
+    width: 213.800px;
+    height: 100px;
+    padding-bottom: 5px;
+    border-bottom: 0.8px solid black;
+    margin-bottom: 10px;
+}
+
+.post-thumb {
+    width: 100px;
+    height: 100px; 
+    float: left;
+}
+
+.contentright {
+    width: 103.800px;
+    height: 100px;
+    float: right;
+}
+
+.contentright h3 a:hover {
+    color: red;
+}
+
+.img_blog {
+    width: 100px;
+    height: 75px; 
+}
+
+.sidebar_blog{
+    width: 230px;
+    padding-bottom: 5px;
+    border-bottom: 0.8px solid black;
+    margin-bottom: 10px;
+    font-size: 22px; 
+}
+
+.sidebar_blog a{
+    color: rgb(66, 8, 132);
+}
+
+/* Phần hướng dẫn thanh toán */
+.row {
+    margin-left: -10px;
+    margin-right: -10px;
+    width: auto;
+}
+
+.article-title {
+    margin-bottom: 15px;
+}
+
+.svg-inline{
+    width: 20px;
+    height: 18px;
+    margin-top: -5px;
+    margin-right: 2px;
+}

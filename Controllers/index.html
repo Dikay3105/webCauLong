@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Display and Delete Image from Firebase</title>
+</head>
+
+<body>
+  <input type="text" id="filePath" placeholder="Enter file path" />
+  <button onclick="displayImage()">Display Image</button>
+  <button onclick="deleteFile()">Delete File</button>
+  <br />
+  <img id="imageDisplay" src="" alt="Image will be displayed here"
+    style="display:none; width:300px; height:auto; margin-top:10px;" />
+
+  <!-- Firebase App (the core Firebase SDK) -->
+  <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app-compat.js"></script>
+
+  <!-- Firebase Storage SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-storage-compat.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyBsTkEPMoozdFG1qh--RQ1C-gyS9BVFh-w",
+      authDomain: "badmintonstorage.firebaseapp.com",
+      projectId: "badmintonstorage",
+      storageBucket: "badmintonstorage.appspot.com",
+      messagingSenderId: "994483053776",
+      appId: "1:994483053776:web:de728e8975b81077bfead5",
+      measurementId: "G-XWX5PKEHP8"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const storage = firebase.storage();
+
+    function displayImage() {
+      const filePath = document.getElementById('filePath').value;
+      console.log(filePath);
+      if (!filePath) {
+        alert('Please enter the file path');
+        return;
+      }
+
+      // Create a reference to the file
+      const fileRef = storage.ref(filePath);
+
+      // Get the download URL
+      fileRef.getDownloadURL().then((url) => {
+        const img = document.getElementById('imageDisplay');
+        img.src = url;
+        img.style.display = 'block';
+        console.log('File available at', url);
+      }).catch((error) => {
+        console.error('Error getting file URL:', error);
+        alert('Error getting file URL: ' + error.message);
+      });
+    }
+
+    function deleteFile() {
+      const filePath = document.getElementById('filePath').value;
+      if (!filePath) {
+        alert('Please enter the file path');
+        return;
+      }
+
+      // Create a reference to the file to delete
+      const fileRef = storage.ref(filePath);
+
+      // Delete the file
+      fileRef.delete().then(() => {
+        console.log('File deleted successfully');
+        alert('File deleted successfully');
+      }).catch((error) => {
+        console.error('Error deleting file:', error);
+        alert('Error deleting file: ' + error.message);
+      });
+    }
+
+  </script>
+</body>
+
+</html>
